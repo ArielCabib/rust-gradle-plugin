@@ -1,13 +1,25 @@
 group 'com.arielcabib'
 version '0.1-SNAPSHOT'
 
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.gradle.publish:plugin-publish-plugin:0.9.0"
+    }
+}
+
+apply plugin: "com.gradle.plugin-publish"
 apply plugin: 'groovy'
 apply plugin: 'java'
 
 sourceCompatibility = 1.6
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -17,4 +29,19 @@ dependencies {
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
+
+pluginBundle {
+    website = 'https://github.com/ArielCabib/rust-gradle-plugin'
+    vcsUrl = 'https://github.com/ArielCabib/rust-gradle-plugin'
+    description = 'A rust plugin for gradle'
+    tags = ['rust', 'cargo']
+
+    plugins {
+        greetingsPlugin {
+            id = 'com.arielcabib.rust'
+            displayName = 'Rust gradle plugin'
+        }
+    }
+}
+
 
