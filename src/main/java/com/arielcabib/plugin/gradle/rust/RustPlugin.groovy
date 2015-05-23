@@ -19,6 +19,7 @@ class RustPlugin implements Plugin<Project> {
         project.task('rustRun') << {
             println "Cargo running"
             project.exec {
+                standardInput System.in
                 commandLine 'cargo', 'run'
             }
         }
