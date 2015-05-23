@@ -23,5 +23,12 @@ class RustPlugin implements Plugin<Project> {
                 commandLine 'cargo', 'run'
             }
         }
+
+        project.task('rustUpdate') << {
+            println "Cargo updating"
+            project.exec {
+                commandLine 'cargo', 'update'
+            }
+        }
     }
 }
