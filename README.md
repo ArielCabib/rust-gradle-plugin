@@ -1,8 +1,8 @@
-#rust-gradle-plugin
+# rust-gradle-plugin
 A [rust plugin](https://plugins.gradle.org/plugin/com.arielcabib.rust) for Gradle.
 
-##How to use
-###A new rust project in IntelliJ 14
+## How to use
+### A new rust project in IntelliJ 14
 * File -> New -> Project
 * Choose Gradle on the as the build system
 * Choose a GroupId, ArtifactId, Version
@@ -33,8 +33,8 @@ rmdir tmp
 
 * In the IntelliJ Gradle panel, hit refresh, and you're good to go. The rustBuild and rustRun will appear under Tasks -> other
 
-##How to contribute
-###With IntelliJ 14
+## How to contribute
+### With IntelliJ 14
 * Clone the repo
 * File -> New -> Project from existing sources
 * Navigate to the cloned repo
